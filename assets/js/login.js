@@ -33,7 +33,7 @@ $(function() {
         e.preventDefault()
         $.post('/api/reguser', { username: $('#form_reg [name=username]').val(), password: $('#form_reg [name=password]').val() }, function(res) {
             if (res.status !== 0) {
-                return layer.msg(res.messge);
+                return layer.msg(res.message);
                 // return layer.msg('成功');
 
             }
