@@ -7,6 +7,7 @@ $(function() {
     var layer = layui.layer
     $('#btnLogout').on('click', function() {
         console.log('ok');
+        //提示用户是否确认退出
         layer.confirm('确定退出登录?', { icon: 3, title: '提示' }, function(index) {
 
             //清空本地 token
@@ -48,9 +49,11 @@ function renderAvarar(user) {
     $('.welcome').html('欢迎&nbsp&nbsp' + name)
         //渲染用户名
     if (user.user_pic !== null) {
+        //渲染图片头像
         $('.layui-nav-img').attr('src', user.user_pic).show()
         $('.text-avatar').hide();
     } else {
+        //渲染文本头像
         $('.layui-nav-img').hide();
         var first = name[0].toUpperCase()
         $('.text-avatar')

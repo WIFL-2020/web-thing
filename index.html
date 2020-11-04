@@ -48,7 +48,7 @@
                 </div>
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
-                    <li class="layui-nav-item layui-nav-itemed">
+                    <li class="layui-nav-item layui-nav-itemed layui-this">
                         <a href="/home/dashboard.html" target="fm"><span class="iconfont icon-home"></span>首页</a
               >
             </li>
@@ -62,7 +62,7 @@
                                 <a href="/article/art_list.html" target="fm"><i class="layui-icon layui-icon-app"></i> 文章列表</a>
                             </dd>
                             <dd>
-                                <a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 发表文章</a>
+                                <a href="/article/art_pub.html" target="fm"><i class="layui-icon layui-icon-app"></i> 发表文章</a>
                             </dd>
                         </dl>
                     </li>
@@ -81,27 +81,26 @@
                   >
                 </dd>
                 <dd>
-                  <a href="/user/user_pwd.html" target="fm"
-                    ><i class="layui-icon layui-icon-face-smile"></i>
-                    重置密码</a
-                  >
-                </dd>
-              </dl>
-            </li>
-          </ul>
+                  <a href="/user/user_pwd.html" target="fm">
+                    <i class="layui-icon layui-icon-face-smile"></i>
+                    重置密码</a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <!-- <i class="layui-icon layui-icon-app></i> -->
-      <div class="layui-body">
-        <!-- 内容主体区域 -->
-        <iframe src="/home/dashboard.html" name="fm" frameborder="0"></iframe>
-      </div>
+        <!-- <i class="layui-icon layui-icon-app></i> -->
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <iframe src="/home/dashboard.html" name="fm" frameborder="0"></iframe>
+        </div>
 
-      <div class="layui-footer">
-        <!-- 底部固定区域 -->
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
 
-        © www.itheima.com - 黑马程序员
-      </div>
+            © www.itheima.com - 黑马程序员
+        </div>
     </div>
     <!-- 导入layui -->
     <script src="/assets/lib/layui/layui.all.js "></script>
@@ -111,5 +110,6 @@
     <script src="/assets/js/baseApi.js"></script>
     <!-- 导入封装的js文件 -->
     <script src="/assets/js/index.js"></script>
-  </body>
+</body>
+
 </html>

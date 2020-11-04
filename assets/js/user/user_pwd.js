@@ -29,7 +29,7 @@ $(function() {
                     return layui.layer.msg('更新密码失败！')
                 }
                 layui.layer.msg('更新密码成功！')
-                    // 重置表单
+                    //jquert对象转换为DOM对象 调用reset重置方法  重置表单  
                 $('.layui-form')[0].reset()
             }
         })

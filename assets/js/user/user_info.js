@@ -24,6 +24,7 @@ $(function() {
                 }
                 console.log(res);
                 console.log(res.data);
+                //调用form.val('') 快速为表单赋值  res.data是用户的基本资料
                 form.val('formUserInfo', res.data)
             }
         })
@@ -31,7 +32,9 @@ $(function() {
 
     //重置表单数据
     $('#btnReset').on('click', function(e) {
+        //阻止表单的默认行为
         e.preventDefault();
+        //调用 初始化
         initUserInfo();
     })
 
@@ -49,7 +52,7 @@ $(function() {
                     return layer.msg('更新数据失败！')
                 }
                 layui.layer.msg('数据更新成功！')
-                    //重新渲染
+                    //调用父页面中的方法  重新渲染  window子页面（本页面） parent（父页面）
                 window.parent.getUserInfo()
             }
         })

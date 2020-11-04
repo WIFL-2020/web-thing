@@ -31,7 +31,8 @@ $(function() {
     //注册功能，监听表单的提交事件
     $('#form_reg').on('submit', function(e) {
         e.preventDefault()
-        $.post('/api/reguser', { username: $('#form_reg [name=username]').val(), password: $('#form_reg [name=password]').val() }, function(res) {
+        let data = { username: $('#form_reg [name=username]').val(), password: $('#form_reg [name=password]').val() }
+        $.post('/api/reguser', data, function(res) {
             if (res.status !== 0) {
                 return layer.msg(res.message);
                 // return layer.msg('成功');
